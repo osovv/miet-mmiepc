@@ -1,6 +1,9 @@
 import sympy as sp
 import time
 
+# :source https://github.com/sympy/sympy/blob/a44299273eeb4838beaee9af3b688f2f44d7702f/sympy/ntheory/factor_.py#L1011-L1456
+# https://chatgpt.com/c/d97d3fa3-edbe-4526-8567-1e2f8843cff8
+
 def factorize_number(n):
     start_time = time.time()
     factors = sp.factorint(n)

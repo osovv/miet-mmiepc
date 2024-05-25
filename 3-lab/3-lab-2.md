@@ -7,7 +7,7 @@ openssl req -new -key al.localhost.key -out al.localhost.csr -subj "/CN=al.local
 ```
 
 ```sh
-days=$(python -c "import datetime; print((datetime.date(2024, 12, 31) - datetime.date.today()).days)")
+days=$(python -c "import datetime; print((datetime.datetime.now().date().replace(month=12, day=31) - datetime.date.today()).days)")
 ```
 
 ```sh
