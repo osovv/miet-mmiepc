@@ -1,7 +1,6 @@
 def find_secret(c, n, t, z):
     # Вычисляем l, так как значение n и t известны
-    power = pow(2, t, n)
-    l = pow(2, power, n)
+    l = pow(2, pow(2, t), n)
     # Используем свойство XOR, чтобы найти secret
     # secret = c ^ l ^ z
     # Решив уравнение для secret, получаем:
@@ -51,7 +50,7 @@ z = int("""139917575971321565740405932420625457310036271079338003886784324182514
 88266642799710954968682523595890942860524722199836600601841002639244606472""".replace("\n",""))
 
 def main():
-  c, n, t, z = long_time_encrypt(123213, 123774, 123129, 111128317)
+  # c, n, t, z = long_time_encrypt(c, n, t, z)
   secret = find_secret(c,n,t,z)
   print("Secret is:", secret)
 
